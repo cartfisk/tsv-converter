@@ -7,9 +7,9 @@ import os
 
 # Create glob pattern, fetch filenames
 if len(sys.argv) < 2:
-    pattern = os.path.join('./tsv').rstrip('/') + '/*.tsv'
+    pattern = os.path.join('.', 'tsv', '*.tsv')
 else:
-    pattern = sys.argv[1].rstrip('/') + '/*.tsv'
+    pattern = os.path.join(sys.argv[1], '*.tsv')
 
 filenames = glob.glob(pattern)
 
